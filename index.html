@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <!-- ESTILOS -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <!-- FUENTES -->
+    <script src="https://kit.fontawesome.com/fc484a31d8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <!-- TOASTIFY CSS -->
+     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+    <header>
+        <section id="logo_con_nombre">
+            <a href="../index.html"><img src="./img/poke_logo.png" alt="Logo pagina"></a>
+        </section>
+        <section id="menu_header">
+            <ul>
+                <li><a href="https://www.youtube.com/@OfficialPoke%CC%81monTV/playlists">
+                        <p>Ver Serie</p>
+                    </a></li>
+                <li><a href="https://www.youtube.com/watch?v=upqHmDk3hYk&list=PLkgakfeGi0OPCRBMCUM5nPwxAcs5MXspw">
+                        <p>juegos</p>
+                    </a></li>
+                <!-- <li><a href="javascript:void(0)">
+                        <p>Juego</p>
+                    </a></li> -->
+            </ul>
+        </section>
+    </header>
+    <div class="headerFade"></div>
+
+    <main >
+        <div id="particles-js"></div>
+        <div class="barraBtns">
+            <button class="vertodos btn">Ver Todos</button>
+            <button class="Bnormal btn">Normal</button>
+            <button class="Bgrass btn">Grass</button>
+            <button class="Bfire btn">Fire</button>
+            <button class="Bwater btn">Water</button>
+            <button class="Belectric btn">Electric</button>
+            <button class="Bfight btn">Fighting</button>
+            <button class="Bpoison btn">Poison</button>
+            <button class="Bdragon btn">Dragon</button>
+            <button class="Bice btn">Ice</button>
+            <button class="Bground btn">Ground</button>
+            <button class="Bbug btn">Bug</button>
+            <button class="Brock btn">Rock</button>
+            <button class="Bghost btn">Ghost</button>
+            <button class="Bfairy btn">Fairy</button>
+            <button class="Bpsychic btn">Psychic</button>
+        </div>
+        <div class="contenedorCatalogo" id="catalogo">
+           
+        </div>
+    </main>
+    <div class="footerFade"></div>
+    <footer>
+        <section>
+
+        </section>
+    </footer>
+    
+    <!-- --------------ENLACE SVG ------------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <!-- ----------------TOASTIFY------------------------- -->
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+     <!-- ---------------PARTICLES------------------------ -->
+      <script src="particles.js"></script>
+      <script>
+        particlesJS({
+  particles: {
+    number: {
+      value: 249,
+      density: {
+        enable: true,
+        value_area: 214,
+      },
+    },
+    color: {
+      value: "#ffffff",
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+        color: "#000000",
+      },
+      polygon: {
+        nb_sides: 5,
+      },
+      image: {
+        src: "img/github.svg",
+        width: 100,
+        height: 100,
+      },
+    },
+    opacity: {
+      value: 1,
+      random: true,
+      anim: {
+        enable: true,
+        speed: 1,
+        opacity_min: 0,
+        sync: false,
+      },
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 4,
+        size_min: 0.3,
+        sync: false,
+      },
+    },
+    line_linked: {
+      enable: false,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1,
+    },
+    move: {
+      enable: true,
+      speed: 1,
+      direction: "none",
+      random: true,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 600,
+      },
+    },
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "repulse",
+      },
+      onclick: {
+        enable: false,
+        mode: "push",
+      },
+      resize: true,
+    },
+    modes: {
+      grab: {
+        distance: 400,
+        line_linked: {
+          opacity: 1,
+        },
+      },
+      bubble: {
+        distance: 250,
+        size: 0,
+        duration: 2,
+        opacity: 0,
+        speed: 3,
+      },
+      repulse: {
+        distance: 110.93150771766351,
+        duration: 0.4,
+      },
+      push: {
+        particles_nb: 4,
+      },
+      remove: {
+        particles_nb: 2,
+      },
+    },
+  },
+  retina_detect: true,
+});
+
+      </script>
+    <!-- --------------ENLACE JAVASCRIPT------------------ -->
+     <script src="./js/pokecatalogo.js"></script>
+     
+</body>
+
+</html>
