@@ -1,0 +1,33 @@
+$color_primario: rgb(120, 34, 34);
+$color_secundario: white;
+$color_hover: rgb(86, 24, 24);
+$color_active: rgb(19, 31, 31);
+$poke-colores: (
+    "normal": #A8A77A,
+    "grass": #7AC74C,
+    "fire": #EE8130,
+    "water": #6390F0,
+    "electric": #F7D02C,
+    "fight": #C22E28,
+    "poison": #A33EA1,
+    "dragon": #6F35FC,
+    "ice": #96D9D6,
+    "ground": #E2BF65,
+    "bug": #A6B91A,
+    "rock": #B6A136,
+    "ghost": #735797,
+    "fairy": #D685AD,
+    "psychic": #F95587
+);
+
+@mixin font_family {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin pokefont {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

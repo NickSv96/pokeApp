@@ -1,0 +1,464 @@
+@use "variables" as*;
+
+body {
+    main {
+        .barraBtns {
+            width: 100wv;
+            height: 80px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+
+            .btn {
+                width: 9%;
+                height: 30px;
+                border: 1px solid black;
+                border-radius: 5px;
+                @include pokefont;
+                font-size: 1.1rem;
+            }
+
+            .btn:active {
+                background-color: black;
+            }
+
+            .Bnormal {
+                background-color: #A8A77A;
+            }
+
+            .Bnormal:hover {
+                background-color: #868660;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .vertodos {
+                background-color: rgba(255, 255, 255, 0.444);
+            }
+
+            .vertodos:hover {
+                background-color: rgba(91, 86, 86, 0.444);
+                color: white;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bgrass {
+                background-color: #7AC74C;
+            }
+
+            .Bgrass:hover {
+                background-color: #63a13f;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bfire {
+                background-color: #EE8130;
+            }
+
+            .Bfire:hover {
+                background-color: #c56b26;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bwater {
+                background-color: #6390F0;
+            }
+
+            .Bwater:hover {
+                background-color: #547acd;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Belectric {
+                background-color: #F7D02C;
+            }
+
+            .Belectric:hover {
+                background-color: #dab625;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bfight {
+                background-color: #C22E28;
+            }
+
+            .Bfight:hover {
+                background-color: #a32622;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bpoison {
+                background-color: #A33EA1;
+            }
+
+            .Bpoison:hover {
+                background-color: #8d358b;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bdragon {
+                background-color: #6F35FC;
+            }
+
+            .Bdragon:hover {
+                background-color: #5e2ddc;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bice {
+                background-color: #96D9D6;
+            }
+
+            .Bice:hover {
+                background-color: #86c2bf;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bground {
+                background-color: #E2BF65;
+            }
+
+            .Bground:hover {
+                background-color: #d1af5c;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bbug {
+                background-color: #A6B91A;
+            }
+
+            .Bbug:hover {
+                background-color: #96a718;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Brock {
+                background-color: #B6A136;
+            }
+
+            .Brock:hover {
+                background-color: #a89432;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bghost {
+                background-color: #735797;
+            }
+
+            .Bghost:hover {
+                background-color: #654d84;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bfairy {
+                background-color: #D685AD;
+            }
+
+            .Bfairy:hover {
+                background-color: #bd769a;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+
+            .Bpsychic {
+                background-color: #F95587;
+            }
+
+            .Bpsychic:hover {
+                background-color: #df4c78;
+                cursor: pointer;
+                transition-duration: 1s;
+            }
+        }
+
+        .contenedorCatalogo {
+            width: 95vw;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            margin: auto;
+
+            .font {
+                color: white;
+
+            }
+
+            .pantallaModal {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.75);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+
+            .contenedorInfoModal {
+                background-color: rgb(9, 9, 49);
+                color: #333333;
+                padding: 2rem;
+                border-radius: 12px;
+                position: relative;
+                max-width: 80vw;
+                width: 90%;
+                max-height: 85vh;
+                overflow-y: auto;
+                box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+
+                .modalImg {
+                    width: 28%;
+                }
+
+                .modalStats {
+                    h3 {
+                        @include pokefont;
+                        font-size: 2rem;
+                    }
+                }
+
+                .cerrarModal {
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    background: transparent;
+                    color: rgba(255, 255, 255, 0.519);
+                    border: none;
+                    font-size: 2.5rem;
+                    cursor: pointer;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                    margin-left: 30px;
+                    margin-top: 20px;
+                    color: white;
+                    @include pokefont;
+                }
+
+                .evolucionesBoton {
+                    width: 100px;
+                    border-radius: 5px;
+                    background-color: gray;
+                    @include pokefont;
+                    font-size: 0.9rem;
+                }
+
+                .contenedorClases {
+                    display: flex;
+                    margin-left: 10px;
+
+                    .pokeClasses {
+                        width: 15vw;
+                        border-radius: 5px;
+                        margin-left: 20px;
+                        text-align: center;
+
+                        p {
+                            @include pokefont;
+                            margin: auto;
+                            -webkit-text-stroke: 0.6px black;
+                        }
+                    }
+
+                    .normal {
+                        background-color: map-get($poke-colores, "normal");
+                        color: #ffffff;
+                    }
+
+                    .grass {
+                        background-color: map-get($poke-colores, "grass");
+                        color: #ffffff;
+                    }
+
+                    .fire {
+                        background-color: map-get($poke-colores, "fire");
+                        color: #ffffff;
+                    }
+
+                    .water {
+                        background-color: map-get($poke-colores, "water");
+                        color: #ffffff;
+                    }
+
+                    .electric {
+                        background-color: map-get($poke-colores, "electric");
+                        color: #212121;
+                    }
+
+                    .fight {
+                        background-color: map-get($poke-colores, "fight");
+                        color: #ffffff;
+                    }
+
+                    .poison {
+                        background-color: map-get($poke-colores, "poison");
+                        color: #ffffff;
+                    }
+
+                    .dragon {
+                        background-color: map-get($poke-colores, "dragon");
+                        color: #ffffff;
+                    }
+
+                    .ice {
+                        background-color: map-get($poke-colores, "ice");
+                        color: #212121;
+                    }
+
+                    .ground {
+                        background-color: map-get($poke-colores, "ground");
+                        color: #ffffff;
+                    }
+
+                    .bug {
+                        background-color: map-get($poke-colores, "bug");
+                        color: #ffffff;
+                    }
+
+                    .rock {
+                        background-color: map-get($poke-colores, "rock");
+                        color: #ffffff;
+                    }
+
+                    .ghost {
+                        background-color: map-get($poke-colores, "ghost");
+                        color: #ffffff;
+                    }
+
+                    .fairy {
+                        background-color: map-get($poke-colores, "fairy");
+                        color: #ffffff;
+                    }
+
+                    .psychic {
+                        background-color: map-get($poke-colores, "psychic");
+                        color: #ffffff;
+                    }
+
+
+                }
+
+                .modalDetalles {
+                    p {
+                        @include pokefont;
+                        font-size: 1rem;
+                        margin-left: 30px;
+                        color: white;
+
+                        strong {
+                            @include pokefont;
+                            color: white;
+                            -webkit-text-stroke: 0.6px black;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+
+                .modalStats {
+                    .titulo {
+                        color: white;
+                        margin-left: 30px;
+                    }
+
+                    ul {
+                        list-style: none;
+                        margin-left: 30px;
+                        text-decoration: none;
+
+                        li {
+                            @include pokefont;
+                            color: white;
+                            font-size: 1.2rem;
+
+                            strong {
+                                font-size: 1.3rem;
+                                -webkit-text-stroke: 0.6px black;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pokeContenedor {
+                background-color: black;
+                width: 200px;
+                height: 300px;
+                border-radius: 5px;
+                margin-left: 20px;
+
+                .pokeImg {
+                    width: 80%;
+                    height: 100px;
+                    margin: 20px;
+                }
+
+                .pokeName {
+                    color: white;
+                    margin-left: 20px;
+                    font-size: 1.8rem;
+                    pointer-events: none;
+                    @include pokefont;
+                }
+
+                .pokeClass {
+                    background-color: var(--color-dinamico, #30d5f6);
+                    width: 30%;
+                    height: 20px;
+                    margin-left: 20px;
+                    border-radius: 3px;
+                    display: flex;
+                    cursor: default;
+
+                    p {
+                        @include pokefont;
+                        font-size: 1.2rem;
+                        margin: auto;
+                    }
+                }
+
+                .pokeInfo {
+                    margin-top: 5px;
+                    width: 100%;
+                    height: 102px;
+                    border-radius: 5px;
+                    background-color: $color_primario;
+                    @include pokefont;
+                    font-size: 1rem;
+                }
+
+                .pokeInfo:hover {
+                    background-color: $color_hover;
+                    color: white;
+                    cursor: pointer;
+                    transition: 1s;
+                }
+            }
+
+            .pokeContenedor:hover {
+                .pokeImg {
+                    scale: 130%;
+                    transition: ease-in-out 2s;
+                }
+            }
+        }
+    }
+}

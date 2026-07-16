@@ -1,0 +1,65 @@
+@use "./variables" as*;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    header {
+        display: flex;
+        width: 100vw;
+        height: 100px;
+        background-color: $color_primario;
+
+        #logo_con_nombre {
+            display: flex;
+            height: 100%;
+
+            a {
+                text-decoration: none;
+                height: 100%;
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+
+        #menu_header {
+            width: 86%;
+            height: 100%;
+
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                list-style: none;
+
+                li {
+                    height: 100%;
+                    width: 200px;
+                    text-align: center;
+
+                    a {
+                        text-decoration: none;
+                        color: $color_secundario;
+
+                        p {
+                            margin-top: 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .headerFade {
+        background-image: linear-gradient(to bottom, $color_primario, rgba(128, 128, 128, 0));
+        width: 100%;
+        height: 20px;
+    }
+}

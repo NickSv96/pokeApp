@@ -1,0 +1,472 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body header {
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  background-color: rgb(120, 34, 34);
+}
+body header #logo_con_nombre {
+  display: flex;
+  height: 100%;
+}
+body header #logo_con_nombre a {
+  text-decoration: none;
+  height: 100%;
+}
+body header #logo_con_nombre a img {
+  height: 100%;
+}
+body header #menu_header {
+  width: 86%;
+  height: 100%;
+}
+body header #menu_header ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+body header #menu_header ul li {
+  height: 100%;
+  width: 200px;
+  text-align: center;
+}
+body header #menu_header ul li a {
+  text-decoration: none;
+  color: white;
+}
+body header #menu_header ul li a p {
+  margin-top: 40px;
+}
+body .headerFade {
+  background-image: linear-gradient(to bottom, rgb(120, 34, 34), rgba(128, 128, 128, 0));
+  width: 100%;
+  height: 20px;
+}
+
+body main #particles-js {
+  background-color: rgb(5, 5, 23);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Envía las partículas al fondo detrás del contenido */
+  pointer-events: none;
+}
+
+body main .barraBtns {
+  width: 100wv;
+  height: 80px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+body main .barraBtns .btn {
+  width: 9%;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1rem;
+}
+body main .barraBtns .btn:active {
+  background-color: black;
+}
+body main .barraBtns .Bnormal {
+  background-color: #A8A77A;
+}
+body main .barraBtns .Bnormal:hover {
+  background-color: #868660;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .vertodos {
+  background-color: rgba(255, 255, 255, 0.444);
+}
+body main .barraBtns .vertodos:hover {
+  background-color: rgba(91, 86, 86, 0.444);
+  color: white;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bgrass {
+  background-color: #7AC74C;
+}
+body main .barraBtns .Bgrass:hover {
+  background-color: #63a13f;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bfire {
+  background-color: #EE8130;
+}
+body main .barraBtns .Bfire:hover {
+  background-color: #c56b26;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bwater {
+  background-color: #6390F0;
+}
+body main .barraBtns .Bwater:hover {
+  background-color: #547acd;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Belectric {
+  background-color: #F7D02C;
+}
+body main .barraBtns .Belectric:hover {
+  background-color: #dab625;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bfight {
+  background-color: #C22E28;
+}
+body main .barraBtns .Bfight:hover {
+  background-color: #a32622;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bpoison {
+  background-color: #A33EA1;
+}
+body main .barraBtns .Bpoison:hover {
+  background-color: #8d358b;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bdragon {
+  background-color: #6F35FC;
+}
+body main .barraBtns .Bdragon:hover {
+  background-color: #5e2ddc;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bice {
+  background-color: #96D9D6;
+}
+body main .barraBtns .Bice:hover {
+  background-color: #86c2bf;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bground {
+  background-color: #E2BF65;
+}
+body main .barraBtns .Bground:hover {
+  background-color: #d1af5c;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bbug {
+  background-color: #A6B91A;
+}
+body main .barraBtns .Bbug:hover {
+  background-color: #96a718;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Brock {
+  background-color: #B6A136;
+}
+body main .barraBtns .Brock:hover {
+  background-color: #a89432;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bghost {
+  background-color: #735797;
+}
+body main .barraBtns .Bghost:hover {
+  background-color: #654d84;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bfairy {
+  background-color: #D685AD;
+}
+body main .barraBtns .Bfairy:hover {
+  background-color: #bd769a;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .barraBtns .Bpsychic {
+  background-color: #F95587;
+}
+body main .barraBtns .Bpsychic:hover {
+  background-color: #df4c78;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+body main .contenedorCatalogo {
+  width: 95vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin: auto;
+}
+body main .contenedorCatalogo .font {
+  color: white;
+}
+body main .contenedorCatalogo .pantallaModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+body main .contenedorCatalogo .contenedorInfoModal {
+  background-color: rgb(9, 9, 49);
+  color: #333333;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
+  max-width: 80vw;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+}
+body main .contenedorCatalogo .contenedorInfoModal .modalImg {
+  width: 28%;
+}
+body main .contenedorCatalogo .contenedorInfoModal .modalStats h3 {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+body main .contenedorCatalogo .contenedorInfoModal .cerrarModal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.519);
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+body main .contenedorCatalogo .contenedorInfoModal h2 {
+  font-size: 2rem;
+  margin-left: 30px;
+  margin-top: 20px;
+  color: white;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body main .contenedorCatalogo .contenedorInfoModal .evolucionesBoton {
+  width: 100px;
+  border-radius: 5px;
+  background-color: gray;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases {
+  display: flex;
+  margin-left: 10px;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .pokeClasses {
+  width: 15vw;
+  border-radius: 5px;
+  margin-left: 20px;
+  text-align: center;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .pokeClasses p {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: auto;
+  -webkit-text-stroke: 0.6px black;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .normal {
+  background-color: #A8A77A;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .grass {
+  background-color: #7AC74C;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .fire {
+  background-color: #EE8130;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .water {
+  background-color: #6390F0;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .electric {
+  background-color: #F7D02C;
+  color: #212121;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .fight {
+  background-color: #C22E28;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .poison {
+  background-color: #A33EA1;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .dragon {
+  background-color: #6F35FC;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .ice {
+  background-color: #96D9D6;
+  color: #212121;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .ground {
+  background-color: #E2BF65;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .bug {
+  background-color: #A6B91A;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .rock {
+  background-color: #B6A136;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .ghost {
+  background-color: #735797;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .fairy {
+  background-color: #D685AD;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .contenedorClases .psychic {
+  background-color: #F95587;
+  color: #ffffff;
+}
+body main .contenedorCatalogo .contenedorInfoModal .modalDetalles p {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  margin-left: 30px;
+  color: white;
+}
+body main .contenedorCatalogo .contenedorInfoModal .modalDetalles p strong {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  -webkit-text-stroke: 0.6px black;
+  font-size: 1.3rem;
+}
+body main .contenedorCatalogo .contenedorInfoModal .modalStats .titulo {
+  color: white;
+  margin-left: 30px;
+}
+body main .contenedorCatalogo .contenedorInfoModal .modalStats ul {
+  list-style: none;
+  margin-left: 30px;
+  text-decoration: none;
+}
+body main .contenedorCatalogo .contenedorInfoModal .modalStats ul li {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 1.2rem;
+}
+body main .contenedorCatalogo .contenedorInfoModal .modalStats ul li strong {
+  font-size: 1.3rem;
+  -webkit-text-stroke: 0.6px black;
+}
+body main .contenedorCatalogo .pokeContenedor {
+  background-color: black;
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+body main .contenedorCatalogo .pokeContenedor .pokeImg {
+  width: 80%;
+  height: 100px;
+  margin: 20px;
+}
+body main .contenedorCatalogo .pokeContenedor .pokeName {
+  color: white;
+  margin-left: 20px;
+  font-size: 1.8rem;
+  pointer-events: none;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body main .contenedorCatalogo .pokeContenedor .pokeClass {
+  background-color: var(--color-dinamico, #30d5f6);
+  width: 30%;
+  height: 20px;
+  margin-left: 20px;
+  border-radius: 3px;
+  display: flex;
+  cursor: default;
+}
+body main .contenedorCatalogo .pokeContenedor .pokeClass p {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin: auto;
+}
+body main .contenedorCatalogo .pokeContenedor .pokeInfo {
+  margin-top: 5px;
+  width: 100%;
+  height: 102px;
+  border-radius: 5px;
+  background-color: rgb(120, 34, 34);
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+body main .contenedorCatalogo .pokeContenedor .pokeInfo:hover {
+  background-color: rgb(86, 24, 24);
+  color: white;
+  cursor: pointer;
+  transition: 1s;
+}
+body main .contenedorCatalogo .pokeContenedor:hover .pokeImg {
+  scale: 130%;
+  transition: ease-in-out 2s;
+}
+
+body .footerFade {
+  background-image: linear-gradient(to top, rgb(120, 34, 34), rgba(128, 128, 128, 0));
+  width: 100%;
+  height: 20px;
+}
+body footer {
+  width: 100vw;
+  height: 100px;
+  background-color: rgb(120, 34, 34);
+}
+
+/*# sourceMappingURL=main.css.map */
