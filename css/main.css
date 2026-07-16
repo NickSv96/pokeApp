@@ -410,6 +410,7 @@ body main .contenedorCatalogo .pokeContenedor .pokeImg {
   width: 80%;
   height: 100px;
   margin: 20px;
+  transition: ease-in-out 1s;
 }
 body main .contenedorCatalogo .pokeContenedor .pokeName {
   color: white;
@@ -455,7 +456,6 @@ body main .contenedorCatalogo .pokeContenedor .pokeInfo:hover {
 }
 body main .contenedorCatalogo .pokeContenedor:hover .pokeImg {
   scale: 130%;
-  transition: ease-in-out 2s;
 }
 
 body .footerFade {
