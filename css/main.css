@@ -405,6 +405,9 @@ body main .contenedorCatalogo .pokeContenedor {
   height: 300px;
   border-radius: 5px;
   margin-left: 20px;
+  transition: ease-in-out 1s;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
 }
 body main .contenedorCatalogo .pokeContenedor .pokeImg {
   width: 80%;
@@ -453,6 +456,9 @@ body main .contenedorCatalogo .pokeContenedor .pokeInfo:hover {
   color: white;
   cursor: pointer;
   transition: 1s;
+}
+body main .contenedorCatalogo .pokeContenedor:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
 }
 body main .contenedorCatalogo .pokeContenedor:hover .pokeImg {
   scale: 130%;
