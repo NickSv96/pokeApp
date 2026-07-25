@@ -200,208 +200,250 @@ body {
 
             }
 
+            // @keyframes fadeIn {
+            //     from {
+            //         opacity: 0;
+            //     }
+
+            //     to {
+            //         opacity: 1;
+            //     }
+            // }
+
+            // @keyframes popUp {
+            //     from {
+            //         opacity: 0;
+            //         transform: scale(0.8) translateY(20px);
+            //     }
+
+            //     to {
+            //         opacity: 1;
+            //         transform: scale(1) translateY(0);
+            //     }
+            // }
+
             .pantallaModal {
+
                 position: fixed;
                 top: 0;
                 left: 0;
                 width: 100vw;
                 height: 100vh;
                 background-color: rgba(0, 0, 0, 0.75);
-                display: flex;
                 justify-content: center;
                 align-items: center;
                 z-index: 1000;
-            }
 
-            .contenedorInfoModal {
-                background-color: rgb(9, 9, 49);
-                color: #333333;
-                padding: 2rem;
-                border-radius: 12px;
-                position: relative;
-                max-width: 80vw;
-                width: 90%;
-                max-height: 85vh;
-                overflow-y: auto;
-                box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease;
 
-                .modalImg {
-                    width: 28%;
-                }
+                .contenedorInfoModal {
+                    display: block;
+                    background-color: rgb(9, 9, 49);
+                    color: #333333;
+                    padding: 2rem;
+                    border-radius: 12px;
+                    position: relative;
+                    max-width: 80vw;
+                    width: 90%;
+                    max-height: 85vh;
+                    overflow-y: auto;
+                    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
 
-                .modalStats {
-                    h3 {
-                        @include pokefont;
+                    transform: scale(0.8) translateY(20px);
+                    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                    .modalImg {
+                        width: 28%;
+                    }
+
+                    .modalStats {
+                        h3 {
+                            @include pokefont;
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .cerrarModal {
+                        position: absolute;
+                        top: 10px;
+                        right: 15px;
+                        background: transparent;
+                        color: rgba(255, 255, 255, 0.519);
+                        border: none;
+                        font-size: 2.5rem;
+                        cursor: pointer;
+                    }
+
+                    h2 {
                         font-size: 2rem;
-                    }
-                }
-
-                .cerrarModal {
-                    position: absolute;
-                    top: 10px;
-                    right: 15px;
-                    background: transparent;
-                    color: rgba(255, 255, 255, 0.519);
-                    border: none;
-                    font-size: 2.5rem;
-                    cursor: pointer;
-                }
-
-                h2 {
-                    font-size: 2rem;
-                    margin-left: 30px;
-                    margin-top: 20px;
-                    color: white;
-                    @include pokefont;
-                }
-
-                .evolucionesBoton {
-                    width: 100px;
-                    border-radius: 5px;
-                    background-color: gray;
-                    @include pokefont;
-                    font-size: 0.9rem;
-                }
-
-                .contenedorClases {
-                    display: flex;
-                    margin-left: 10px;
-
-                    .pokeClasses {
-                        width: 15vw;
-                        border-radius: 5px;
-                        margin-left: 20px;
-                        text-align: center;
-
-                        p {
-                            @include pokefont;
-                            margin: auto;
-                            -webkit-text-stroke: 0.6px black;
-                        }
-                    }
-
-                    @each $tipo, $color-fondo in $poke-colores {
-                        .#{$tipo} {
-                            background-color: $color-fondo;
-
-                            // Opcional: una condicional para cambiar el texto según el tipo
-                            @if $tipo =="electric" or $tipo =="ice" {
-                                color: #212121;
-                            }
-
-                            @else {
-                                color: #ffffff;
-                            }
-                        }
-                    }
-                }
-
-                .modalDetalles {
-                    p {
+                        margin-left: 30px;
+                        margin-top: 20px;
+                        color: white;
                         @include pokefont;
-                        font-size: 1rem;
-                        margin-left: 30px;
-                        color: white;
-
-                        strong {
-                            @include pokefont;
-                            color: white;
-                            -webkit-text-stroke: 0.6px black;
-                            font-size: 1.3rem;
-                        }
-                    }
-                }
-
-                .modalStats {
-                    .titulo {
-                        color: white;
-                        margin-left: 30px;
                     }
 
-                    ul {
-                        list-style: none;
-                        margin-left: 30px;
-                        text-decoration: none;
+                    .evolucionesBoton {
+                        width: 100px;
+                        border-radius: 5px;
+                        background-color: gray;
+                        @include pokefont;
+                        font-size: 0.9rem;
+                    }
 
-                        li {
-                            @include pokefont;
-                            color: white;
-                            font-size: 1.2rem;
+                    .contenedorClases {
+                        display: flex;
+                        margin-left: 10px;
 
-                            strong {
-                                font-size: 1.3rem;
+                        .pokeClasses {
+                            width: 15vw;
+                            border-radius: 5px;
+                            margin-left: 20px;
+                            text-align: center;
+
+                            p {
+                                @include pokefont;
+                                margin: auto;
                                 -webkit-text-stroke: 0.6px black;
                             }
                         }
+
+                        @each $tipo, $color-fondo in $poke-colores {
+                            .#{$tipo} {
+                                background-color: $color-fondo;
+
+                                // Opcional: una condicional para cambiar el texto según el tipo
+                                @if $tipo =="electric" or $tipo =="ice" {
+                                    color: #212121;
+                                }
+
+                                @else {
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+                    }
+
+                    .modalDetalles {
+                        p {
+                            @include pokefont;
+                            font-size: 1rem;
+                            margin-left: 30px;
+                            color: white;
+
+                            strong {
+                                @include pokefont;
+                                color: white;
+                                -webkit-text-stroke: 0.6px black;
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+
+                    .modalStats {
+                        .titulo {
+                            color: white;
+                            margin-left: 30px;
+                        }
+
+                        ul {
+                            list-style: none;
+                            margin-left: 30px;
+                            text-decoration: none;
+
+                            li {
+                                @include pokefont;
+                                color: white;
+                                font-size: 1.2rem;
+
+                                strong {
+                                    font-size: 1.3rem;
+                                    -webkit-text-stroke: 0.6px black;
+                                }
+                            }
+                        }
                     }
                 }
             }
 
-            .pokeContenedor {
-                background-color: black;
-                width: 200px;
-                height: 300px;
-                border-radius: 5px;
-                margin-left: 20px;
+            .is-open {
+                opacity: 1;
+                pointer-events: auto;
+                // animation: fadeIn 0.3s ease-out forwards;
+
+                .contenedorInfoModal {
+                    transform: scale(1) translateY(0);
+                    // animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+                }
+            }
+
+        }
+
+        .pokeContenedor {
+            background-color: black;
+            width: 200px;
+            height: 300px;
+            border-radius: 5px;
+            margin-left: 20px;
+            transition: ease-in-out 1s;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            transition: box-shadow 0.3s ease;
+
+            .pokeImg {
+                width: 80%;
+                height: 100px;
+                margin: 20px;
                 transition: ease-in-out 1s;
-                box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-                transition: box-shadow 0.3s ease;
+            }
 
-                .pokeImg {
-                    width: 80%;
-                    height: 100px;
-                    margin: 20px;
-                    transition: ease-in-out 1s;
-                }
+            .pokeName {
+                color: white;
+                margin-left: 20px;
+                font-size: 1.8rem;
+                pointer-events: none;
+                @include pokefont;
+            }
 
-                .pokeName {
-                    color: white;
-                    margin-left: 20px;
-                    font-size: 1.8rem;
-                    pointer-events: none;
+            .pokeClass {
+                background-color: var(--color-dinamico, #30d5f6);
+                width: 30%;
+                height: 20px;
+                margin-left: 20px;
+                border-radius: 3px;
+                display: flex;
+                cursor: default;
+
+                p {
                     @include pokefont;
-                }
-
-                .pokeClass {
-                    background-color: var(--color-dinamico, #30d5f6);
-                    width: 30%;
-                    height: 20px;
-                    margin-left: 20px;
-                    border-radius: 3px;
-                    display: flex;
-                    cursor: default;
-
-                    p {
-                        @include pokefont;
-                        font-size: 1.2rem;
-                        margin: auto;
-                    }
-                }
-
-                .pokeInfo {
-                    margin-top: 5px;
-                    width: 100%;
-                    height: 102px;
-                    border-radius: 5px;
-                    background-color: $color_primario;
-                    @include pokefont;
-                    font-size: 1rem;
-                }
-
-                .pokeInfo:hover {
-                    background-color: $color_hover;
-                    color: white;
-                    cursor: pointer;
-                    transition: 1s;
+                    font-size: 1.2rem;
+                    margin: auto;
                 }
             }
 
-            .pokeContenedor:hover {
-                box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+            .pokeInfo {
+                margin-top: 5px;
+                width: 100%;
+                height: 102px;
+                border-radius: 5px;
+                background-color: $color_primario;
+                @include pokefont;
+                font-size: 1rem;
+            }
 
-                .pokeImg {
-                    scale: 130%;
-                }
+            .pokeInfo:hover {
+                background-color: $color_hover;
+                color: white;
+                cursor: pointer;
+                transition: 1s;
+            }
+        }
+
+        .pokeContenedor:hover {
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+
+            .pokeImg {
+                scale: 130%;
             }
         }
     }

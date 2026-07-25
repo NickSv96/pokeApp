@@ -99,11 +99,10 @@ function insertarTarjeta(pokemon, filtro) {
   const botonInfo = tarjeta.querySelector(`#info${pokemon.id}`);
 
   botonInfo.addEventListener("click", function () {
-    console.log("¡Hiciste clic en el botón de:", pokemon.name);
     // 1. Creamos el contenedor del modal
+
     let modal = document.createElement("div");
     modal.classList.add("pantallaModal");
-
     // 2. Extraemos algunos datos útiles para mostrar
     const altura = pokemon.height / 10; // Convertimos decímetros a metros
     const peso = pokemon.weight / 10; // Convertimos hectogramos a kg
@@ -137,19 +136,31 @@ function insertarTarjeta(pokemon, filtro) {
       </div>
     `;
 
-    // 4. Agregamos el modal al body
+    // 4. Agregamos el modal al contenedor pantallaModal
     contenedor.appendChild(modal);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        modal.classList.add("is-open");
+      });
+    });
+    function cerrarModal() {
+      // Quitamos la clase de entrada y agregamos la de salida
+      modal.classList.remove("is-open");
+
+      // Esperamos que termine la animación (250ms = 0.25s de la CSS) para eliminarlo
+      setTimeout(() => {
+        modal.remove();
+      }, 300);
+    }
 
     // 5. Lógica para cerrar el modal al hacer clic en el botón 'X'
     const btnCerrar = modal.querySelector("#cerrarModal");
-    btnCerrar.addEventListener("click", () => {
-      modal.remove();
-    });
+    btnCerrar.addEventListener("click", cerrarModal);
 
     // 6. Opcional: cerrar el modal al hacer clic fuera del contenido
     modal.addEventListener("click", (e) => {
       if (e.target === modal) {
-        modal.remove();
+        cerrarModal();
       }
     });
   });
