@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -51,15 +50,17 @@ body .headerFade {
   height: 20px;
 }
 
+body main {
+  min-height: 66vh;
+}
 body main #particles-js {
   background-color: rgb(5, 5, 23);
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
-  /* Envía las partículas al fondo detrás del contenido */
   pointer-events: none;
 }
 
@@ -464,12 +465,13 @@ body main .contenedorCatalogo .pokeContenedor:hover .pokeImg {
   scale: 130%;
 }
 
-body .footerFade {
+body footer .footerFade {
+  display: block;
   background-image: linear-gradient(to top, rgb(120, 34, 34), rgba(128, 128, 128, 0));
   width: 100%;
   height: 20px;
 }
-body footer {
+body footer .footer {
   width: 100vw;
   height: 100px;
   background-color: rgb(120, 34, 34);
