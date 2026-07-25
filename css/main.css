@@ -244,6 +244,7 @@ body main .contenedorCatalogo .pantallaModal .contenedorInfoModal {
   display: block;
   background-color: rgb(9, 9, 49);
   color: #333333;
+  margin: auto;
   padding: 2rem;
   border-radius: 12px;
   position: relative;
